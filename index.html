@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171717">
+<title>MK JEWELLERS</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f8f6f1;color:#222}
+header{background:#171717;color:#e7c879;text-align:center;padding:25px 12px}
+header h1{letter-spacing:3px;margin:5px}
+header p{font-size:12px;letter-spacing:2px}
+nav{background:#292929;padding:13px;text-align:center}
+nav a{color:#fff;text-decoration:none;margin:0 10px;font-size:13px}
+.hero{background:linear-gradient(135deg,#171717,#59452a);color:#e7c879;text-align:center;padding:65px 15px}
+.hero h2{font-size:32px;margin:0 0 12px}
+.hero p{color:white}
+.btn{display:inline-block;background:#d5b36b;color:#171717;padding:12px 22px;text-decoration:none;border-radius:5px;font-weight:bold;margin-top:15px}
+section{padding:35px 16px;text-align:center}
+h2{color:#80642d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:15px;max-width:850px;margin:20px auto}
+.item{background:white;padding:25px 10px;border-radius:10px;box-shadow:0 2px 12px #00000012}
+.item .emoji{font-size:42px}
+.item h3{font-size:16px}
+form{max-width:480px;margin:auto;text-align:left;background:white;padding:20px;border-radius:10px}
+input,select,textarea{width:100%;padding:12px;margin:7px 0 15px;border:1px solid #ccc;border-radius:5px;font-size:15px}
+button{background:#171717;color:#e7c879;border:0;padding:14px;width:100%;border-radius:5px;font-size:16px;cursor:pointer}
+footer{background:#171717;color:#e7c879;text-align:center;padding:25px;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>MK JEWELLERS</h1>
+<p>EXCLUSIVE CUSTOM MADE JEWELLERY</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Collections</a>
+<a href="#order">Order</a>
+<a href="#about">About</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>Your Design, Our Craft</h2>
+<p>Beautiful Jewellery Made Just For You</p>
+<a class="btn" href="#products">Explore Collection</a>
+</div>
+
+<section id="products">
+<h2>Our Collections</h2>
+<p>Choose your favourite jewellery category</p>
+<div class="grid">
+<div class="item"><div class="emoji">💍</div><h3>Gold Jewellery</h3></div>
+<div class="item"><div class="emoji">✨</div><h3>Silver Jewellery</h3></div>
+<div class="item"><div class="emoji">💎</div><h3>White Gold</h3></div>
+<div class="item"><div class="emoji">📿</div><h3>Custom Designs</h3></div>
+<div class="item"><div class="emoji">🌟</div><h3>Platinum</h3></div>
+<div class="item"><div class="emoji">🔗</div><h3>Other Metals</h3></div>
+</div>
+</section>
+
+<section id="about">
+<h2>About MK JEWELLERS</h2>
+<p>We create custom-made jewellery according to your choice and design.</p>
+<p>Every piece is specially prepared on order.</p>
+<p><b>Booking Policy:</b> 50% advance payment is required.</p>
+<p>Prices depend on jewellery weight, metal type and current market rates.</p>
+</section>
+
+<section id="order">
+<h2>Place Your Order</h2>
+<form id="orderForm">
+<label>Your Name</label>
+<input id="name" required placeholder="Enter your name">
+
+<label>Jewellery Category</label>
+<select id="category">
+<option>Gold Jewellery</option>
+<option>Silver Jewellery</option>
+<option>White Gold</option>
+<option>Platinum</option>
+<option>Custom Design</option>
+</select>
+
+<label>Describe Your Design</label>
+<textarea id="details" rows="4" placeholder="Tell us what you want"></textarea>
+
+<label>Approximate Budget (Optional)</label>
+<input id="budget" placeholder="Enter your budget">
+
+<button type="submit">Send Order on WhatsApp</button>
+</form>
+</section>
+
+<footer>
+<h3>MK JEWELLERS</h3>
+<p>Your Choice. Your Design. Our Craft.</p>
+<p>Custom Made Jewellery | Made on Order</p>
+</footer>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit",function(e){
+e.preventDefault();
+let message="MK JEWELLERS ORDER ENQUIRY%0A"+
+"Name: "+encodeURIComponent(document.getElementById("name").value)+"%0A"+
+"Category: "+encodeURIComponent(document.getElementById("category").value)+"%0A"+
+"Design: "+encodeURIComponent(document.getElementById("details").value)+"%0A"+
+"Budget: "+encodeURIComponent(document.getElementById("budget").value);
+window.open("https://wa.me/?text="+message,"_blank");
+});
+</script>
+
+</body>
+                                      </html>
+                                      
